@@ -6,18 +6,18 @@ HTML STRUCTURE======================
 
 You must structure your HTML in the following way:
 
-&lt;ul class="expanding-grid"&gt;
-  &lt;li&gt;
-    &lt;div class="outer-content"&gt;
-      &lt;!-- ALL EXTERIOR CONTENT HERE --&gt;
-    &lt;/div&gt;
-    &lt;div class="inner-content&gt;
-      &lt;div&gt;
-        &lt;!-- ALL INTERIOR DRAWER CONTENT HERE --&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;ul class="expanding-grid"&gt; <br>
+  &lt;li&gt; <br>
+    &lt;div class="outer-content"&gt; <br>
+      &lt;!-- ALL EXTERIOR CONTENT HERE --&gt; <br>
+    &lt;/div&gt; <br>
+    &lt;div class="inner-content&gt; <br>
+      &lt;div&gt; <br>
+        &lt;!-- ALL INTERIOR DRAWER CONTENT HERE --&gt; <br>
+      &lt;/div&gt; <br>
+    &lt;/div&gt; <br>
+  &lt;/li&gt; <br> 
+&lt;/ul&gt; <br>
 
 You can then add as may li items as necessary to create your grid.
 
