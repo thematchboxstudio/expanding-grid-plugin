@@ -298,12 +298,11 @@ var Grid = (function() {
 
 	function openDrawer($item){
 		current = $item.index();
-		updateViewPosition($item);
-
 		$item.data("opened", true);
 		$item.addClass('open-drawer');
 		$item.children('.inner-content').css('height', $item.data('innerContentHeight'));
 		$item.css('height', $item.data('outerContentOpenHeight'));
+		updateViewPosition($item);
 	}
 
 	function closeDrawer($item){
