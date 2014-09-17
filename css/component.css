@@ -189,3 +189,13 @@ z-index:99999;
 .expanding-grid h1{
 	font-size: 30px;
 }
+
+.inner-content div{
+	max-width:900px;
+	margin:0 auto;
+}
+
+.inner-content img{
+	width:100%;
+	max-width: 700px;
+}
