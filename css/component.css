@@ -1,0 +1,191 @@
+.expanding-grid {
+	list-style: none;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	font-size:0;
+}
+
+.expanding-grid li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.expanding-grid li > a,
+.expanding-grid li > a img {
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+}
+
+.expanding-grid .outer-content{
+	cursor: pointer;
+}
+
+.expanding-grid li, .expanding-grid .inner-content{
+	transition: height 350ms ease;
+}
+
+.expanding-grid .outer-content img{
+	width:100%;
+}
+
+.expanding-grid .inner-content {
+	position: absolute;
+	top: auto;
+	left: 0;
+	width: 100%;
+	text-align: left;
+	height: 0;
+	overflow: hidden;
+	height: 100%;
+	left:0;
+}
+
+.expanding-grid li .close {
+	position: absolute;
+	z-index: 9999;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.expanding-grid .close::before,
+.expanding-grid .close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: 1px;
+	background: #888;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.expanding-grid .close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.expanding-grid .close:hover::before,
+.expanding-grid .close:hover::after {
+	background: #333;
+}
+
+.expanding-grid li.open-drawer > .outer-content::after {
+top: -15px;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: relative;
+pointer-events: none;
+border-width: 15px;
+z-index:99999;
+}
+
+.og-fullimg,
+.og-details {
+	width: 50%;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.og-details {
+	padding: 0 40px 0 20px;
+}
+
+.og-fullimg {
+	text-align: center;
+}
+
+.og-loading {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ddd;
+	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
+}
+
+@-webkit-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@-moz-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@media screen and (max-width: 830px) {
+
+	.inner-content h3 { font-size: 32px; }
+	.inner-content p { font-size: 13px; }
+	.inner-content a { font-size: 12px; }
+
+}
+
+@media screen and (max-width: 650px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 100%; }
+
+}
+
+.expanding-grid .inner-content{
+	overflow: hidden;
+}
+
+
+
+
+
+/**********************EDITABLE CSS*************************/
+
+/* There is font-size:0 on .expanding grid. this is to remove the extra margin from inline-block.  */
+
+.expanding-grid li.open-drawer > .outer-content::after { /* ARROW COLOR */
+	border-bottom-color: #ddd;
+}
+
+.expanding-grid .inner-content{
+	width:100%;
+	background: #ddd;
+}
+
+.expanding-grid li{
+	width:25%;
+}
+
+.inner-content div{
+	padding:90px;
+}
+.expanding-grid p{
+	font-size: 12px;
+}
+
+.expanding-grid h1{
+	font-size: 30px;
+}

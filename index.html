@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Thumbnail Grid with Expanding Preview</title>
+		<meta name="description" content="Thumbnail Grid with Expanding Preview" />
+		<meta name="keywords" content="thumbnails, grid, preview, google image search, jquery, image grid, expanding, preview, portfolio" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+			<div class="main">
+				<ul id="expanding-grid" class="expanding-grid">
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li><li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+								</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li><li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li><li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+								</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li><li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+								</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li><li>
+						<div class="outer-content">
+							<img src="images/thumbs/1.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<h1>Test Section 1</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+								</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/2.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/2.jpg">
+								<h1>Test Section 2</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="outer-content">
+							<img src="images/thumbs/3.jpg" alt="img01"/>
+						</div>
+						<div class="inner-content">
+							<div>
+								<span class="close"></span>
+								<img src="images/3.jpg">
+								<h1>Test Section 3</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem lacus, suscipit vel ipsum convallis, tempus fringilla felis. Mauris nunc leo, suscipit a justo ac, ultricies luctus massa. Vivamus ornare dolor at elementum consequat. Nulla imperdiet est fringilla ante elementum accumsan. Cras pharetra, metus et feugiat venenatis, ex neque interdum mauris, vel bibendum massa odio nec urna. Curabitur ac ipsum eget mi suscipit tincidunt sit amet eu erat. Duis sit amet mi in massa imperdiet ullamcorper quis eu orci. Fusce felis purus, vulputate eu leo id, interdum congue dui. Morbi sed augue vitae ipsum ultricies posuere. Nulla facilisi. Ut ac erat id nibh lacinia commodo non varius nisi. Aenean rutrum tellus vel risus pellentesque faucibus. Aenean commodo laoreet scelerisque.</p>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/grid.js"></script>
+		<script>
+			Grid.init();
+		</script>
+	</body>
+</html>
