@@ -98,6 +98,8 @@ var Grid = (function() {
 			//when you click the close X, close the drawer or open when you click anything in .outer-content
 			$items.on( 'click', 'span.close', function() {
 				var $item = $( this ).parent().parent().parent();
+				$('li').removeClass('notransition');
+				$('div').removeClass('notransition');
 				closeDrawer($item);
 				return false;
 			} ).children( '.outer-content' ).on( 'click', function(e) {
@@ -118,7 +120,13 @@ var Grid = (function() {
 				if(current === $item.index()){
 
 					//if it's already open, then close
+
+
+					$('li').removeClass('notransition');
+					$('div').removeClass('notransition');
+
 					closeDrawer($item);
+
 
 
 
@@ -135,25 +143,52 @@ var Grid = (function() {
 						//if the old open drawer and the new opening drawer are in the same row
 						if(inSameRow($openDrawer, $item)){
 
+							$items.each(function() {
+								var $rowItem = $(this);
+								var itemsInRow = [];
+								if(inSameRow($openDrawer, $rowItem)){
+									itemsInRow.push($rowItem);
+								}
 
-							//if old drawer and new drawer are of equal height
-							if(sameHeight($openDrawer, $item)){
+								for(i=0; i <= itemsInRow.length; i++){
+									$(itemsInRow[i]).addClass('notransition');
+									$(itemsInRow[i]).children('.inner-content').addClass('notransition');
+								}
+
+							});
+
+							closeDrawer($openDrawer);
+							openDrawer($item);
+
+
+							// //if old drawer and new drawer are of equal height
+							// if(sameHeight($openDrawer, $item)){
 
 
 
-								instantOpenOuterContent($item);
-								openInnerContent($item);
-								setTimeout(function() {
-									closeInnerContent($openDrawer);
-									closeOuterContent($openDrawer);
-									current = getIndex();
-								},settings.speed);
+								// //open the outer content of the new drawer, but do it instantly (no animation) so that
+								// //the heights of the outer content for the old and new drawer are equal
+								// instantOpenOuterContent($item);
+
+								// //open the new inner content
+								// openInnerContent($item);
+
+								// //delay closing the old drawer so that the new drawer has time to open all the way
+								// setTimeout(function() {
+								// 	//close the old drawer
+								// 	closeInnerContent($openDrawer);
+								// 	closeOuterContent($openDrawer);
+								// 	//reset the current index to the new drawer
+								// 	current = getIndex();
+								// },settings.speed);
 
 
-							}else{
-								closeDrawer($openDrawer);
-								openDrawer($item);
-							}
+
+
+							// }else{
+							// 	closeDrawer($openDrawer);
+							// 	openDrawer($item);
+							// }
 
 						//else close the old open drawer and open the new drawer
 						}else{
@@ -326,6 +361,10 @@ var Grid = (function() {
 	function getIndex(){
 		return $('.open-drawer').index();
 	}
+
+	function removeTransitions(){
+
+	};
 
 	return {
 		init : init
