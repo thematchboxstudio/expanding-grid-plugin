@@ -1,6 +1,7 @@
 expanding-grid-plugin
 =====================
 
+Initialize the plugin with Grid.init();
 
 HTML STRUCTURE======================
 

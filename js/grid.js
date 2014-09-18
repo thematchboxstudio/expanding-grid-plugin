@@ -105,13 +105,69 @@ var Grid = (function() {
 
 				var $item = $( this ).parent();
 
-				// check if item already opened
+				// // check if item already opened
+				// if(current === $item.index()){
+				// 	closeDrawer($item);
+				// }else{
+				// 	//Close all drawers
+				// 	setToClosed($items);
+				// 	openDrawer($item);
+				// }
+
+				// check if item clicked is already opened
 				if(current === $item.index()){
+
+					//if it's already open, then close
 					closeDrawer($item);
+
+
+
 				}else{
-					//Close all drawers
-					setToClosed($items);
-					openDrawer($item);
+
+					//if a different drawer is open that is not the one that was clicked on
+					if(current !== -1){
+
+
+
+						//get the old open drawer
+						var $openDrawer = $('.open-drawer');
+
+						//if the old open drawer and the new opening drawer are in the same row
+						if(inSameRow($openDrawer, $item)){
+
+
+							//if old drawer and new drawer are of equal height
+							if(sameHeight($openDrawer, $item)){
+
+
+
+								instantOpenOuterContent($item);
+								openInnerContent($item);
+								setTimeout(function() {
+									closeInnerContent($openDrawer);
+									closeOuterContent($openDrawer);
+									current = getIndex();
+								},settings.speed);
+
+
+							}else{
+								closeDrawer($openDrawer);
+								openDrawer($item);
+							}
+
+						//else close the old open drawer and open the new drawer
+						}else{
+
+							closeDrawer($openDrawer);
+							openDrawer($item);
+						}
+
+					//else no drawers are open, therefore open the new drawer.
+					}else{
+						openDrawer($item);
+
+
+					}
 				}
 
 				return false;
@@ -222,6 +278,53 @@ var Grid = (function() {
 			// 		: previewOffsetT;
 
 			$body.animate( { scrollTop : position }, settings.speed );
+	}
+
+
+	function inSameRow($openDrawer, $item){
+		if ($openDrawer.data('offsetTop') === $item.data('offsetTop')){
+			return true;
+		}
+	}
+
+	function sameHeight($openDrawer, $item){
+		if($openDrawer.data('outerContentOpenHeight') === $item.data('outerContentOpenHeight')){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	function openOuterContent($item){
+		$item.css('height', $item.data('outerContentOpenHeight'));
+	}
+
+	function closeOuterContent($item){
+		$item.css('height', $item.data('outerContentCloseHeight'));
+	}
+
+	function openInnerContent($item){
+		$item.children('.inner-content').css('height', $item.data('innerContentHeight'));
+		$item.data("opened", true);
+		$item.addClass('open-drawer');
+		$item.children('.inner-content').css('z-index', '999');
+	}
+
+	function closeInnerContent($item){
+		$item.children('.inner-content').css('height', 0);
+		$item.data("opened", false);
+		$item.removeClass('open-drawer');
+		$item.children('.inner-content').css('z-index', '');
+	}
+
+	function instantOpenOuterContent($item){
+		$item.addClass('notransition');
+		$item.css('height', $item.data('outerContentOpenHeight'));
+		$item.removeClass('notransition');
+	}
+
+	function getIndex(){
+		return $('.open-drawer').index();
 	}
 
 	return {
